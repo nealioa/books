@@ -13,7 +13,7 @@ return function (App $app) {
 
     $app->get('/', function ($request, $response, $args) use ($container) {
         $renderer = $container->get(PhpRenderer::class);
-        return $renderer->render($response, "newindex.php", $args);
+        return $renderer->render($response, "index.php", $args);
     });
 
     $app->get('/courses', CoursesAPIController::class);
